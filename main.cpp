@@ -72,35 +72,33 @@ int main() {
     std::cout << "Please input the points earned for Assignment " << assignment << ": ";
     std::cin >> assignment_score;
 
-        if (assignment_score >= 0) {
-            std::cin.ignore();  // Clear input buffer
-            std::string assignment_name;
-            std::cout << "Please input the name for Assignment " << assignment << ": ";
-            std::getline(std::cin, assignment_name);
+    if (assignment_score >= 0) {
+        std::cin.ignore();  // Clear input buffer
+        std::string assignment_name;
+        std::cout << "Please input the name for Assignment " << assignment << ": ";
+        std::getline(std::cin, assignment_name);
 
-            // Store name and score
-            assignment_names.push_back(assignment_name);
-            assignment_scores.push_back(assignment_score);
-            total_points_earned += assignment_score;
-            assignment++;
-        } else {
-            score_input = false;
-        }
+        // Store name and score
+        assignment_names.push_back(assignment_name);
+        assignment_scores.push_back(assignment_score);
+        total_points_earned += assignment_score;
+        assignment++;
+    } else {
+        score_input = false;
+    }
+    } while (score_input); // Correct placement of the while condition
 
-    } 
-    
-    // Create a vector of indices for sorting
+    // Sort assignments by score (highest to lowest)
+    // Place this after the do-while loop is fully closed
     std::vector<int> indices(assignment_scores.size());
     for (int i = 0; i < indices.size(); i++) {
         indices[i] = i;
     }
 
-    // Sort indices based on scores in descending order
     std::sort(indices.begin(), indices.end(), [&](int a, int b) {
         return assignment_scores[a] > assignment_scores[b];
     });
 
-    // Create new sorted vectors
     std::vector<std::string> sorted_names;
     std::vector<float> sorted_scores;
     for (int i : indices) {
@@ -108,7 +106,6 @@ int main() {
         sorted_scores.push_back(assignment_scores[i]);
     }
 
-    // Replace original vectors with sorted versions
     assignment_names = sorted_names;
     assignment_scores = sorted_scores;
 
