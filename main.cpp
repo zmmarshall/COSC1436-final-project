@@ -2,6 +2,9 @@
 #include <cmath>
 #include <ctime>
 #include "Greeting.h"
+#include <vector>
+#include <string>
+#include <algorithm>
 
 int main() {
     // Variable declarations
@@ -18,6 +21,9 @@ int main() {
     char earned_grade;
     bool score_input = true;
     int assignment = 1;
+
+    std::vector<std::string> assignment_names;
+    std::vector<float> assignment_scores;
 
     // Display a time-based greeting
     displayGreeting();
@@ -63,37 +69,81 @@ int main() {
     std::cout << "(Input a negative number to cease input and calculate letter grade.)\n\n";
 
     do {
-        std::cout << "Please input the points earned for Assignment " << assignment << ": ";
-        std::cin >> assignment_score;
-        
+    std::cout << "Please input the points earned for Assignment " << assignment << ": ";
+    std::cin >> assignment_score;
+
         if (assignment_score >= 0) {
+            std::cin.ignore();  // Clear input buffer
+            std::string assignment_name;
+            std::cout << "Please input the name for Assignment " << assignment << ": ";
+            std::getline(std::cin, assignment_name);
+
+            // Store name and score
+            assignment_names.push_back(assignment_name);
+            assignment_scores.push_back(assignment_score);
             total_points_earned += assignment_score;
             assignment++;
         } else {
             score_input = false;
         }
-    } while (score_input);
 
-    // Determine the final grade
-    if (total_points_earned >= A_points) {
-        earned_grade = 'A';
+    } 
+    
+    // Create a vector of indices for sorting
+    std::vector<int> indices(assignment_scores.size());
+    for (int i = 0; i < indices.size(); i++) {
+        indices[i] = i;
     }
-    else if (total_points_earned >= B_points) {
-        earned_grade = 'B';
+
+    // Sort indices based on scores in descending order
+    std::sort(indices.begin(), indices.end(), [&](int a, int b) {
+        return assignment_scores[a] > assignment_scores[b];
+    });
+
+    // Create new sorted vectors
+    std::vector<std::string> sorted_names;
+    std::vector<float> sorted_scores;
+    for (int i : indices) {
+        sorted_names.push_back(assignment_names[i]);
+        sorted_scores.push_back(assignment_scores[i]);
     }
-    else if (total_points_earned >= C_points) {
-        earned_grade = 'C';
-    }
-    else if (total_points_earned >= D_points) {
-        earned_grade = 'D';
-    }
-    else {
-        earned_grade = 'F';
-    }
+
+    // Replace original vectors with sorted versions
+    assignment_names = sorted_names;
+    assignment_scores = sorted_scores;
+
+    while (score_input);
+
+        // Determine the final grade
+        if (total_points_earned >= A_points) {
+            earned_grade = 'A';
+        }
+        else if (total_points_earned >= B_points) {
+            earned_grade = 'B';
+        }
+        else if (total_points_earned >= C_points) {
+            earned_grade = 'C';
+        }
+        else if (total_points_earned >= D_points) {
+            earned_grade = 'D';
+        }
+        else {
+            earned_grade = 'F';
+        }
 
     // Calculate percentage and round it
     total_percentage_earned = (total_points_earned / total_course_points) * 100;
     total_percentage_earned = std::round(total_percentage_earned);
+
+    // Display sorted assignments
+    if (!assignment_names.empty()) {
+        std::cout << "\nAssignments Sorted by Score (Highest to Lowest)\n";
+        std::cout << "===============================================\n";
+        for (size_t i = 0; i < assignment_names.size(); i++) {
+            std::cout << assignment_names[i] << ": " << assignment_scores[i] << " points\n";
+        }
+        std::cout << std::endl;
+    }
 
     // Display results
     std::cout << "\nFinal Results\n";
