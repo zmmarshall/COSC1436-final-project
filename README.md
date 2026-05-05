@@ -7,7 +7,7 @@ from a user-defined grading scheme and a set of assignment scores.
 Z'Morion Marshall - COSC 1436, 2026
 
 ## Description
-[2-3 sentences describing what the program does and who it's for.]
+This progam is a simple grade calacualtor, that the user can use to help find out there grade in a class.
 
 ## Features
 - Time-of-day greeting
