@@ -8,8 +8,8 @@
 
 /*
  * Grade Calculator — Final Project
- * Author: [Your Name]
- * Course: COSC 1436, [Semester Year]
+ * Author: Z'Morion Marshall
+ * Course: COSC 1436, 2026 
  *
  * Concepts Demonstrated (Chapters 1-12)
  * -------------------------------------
