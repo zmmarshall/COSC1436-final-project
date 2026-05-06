@@ -1,15 +1,16 @@
-Your user guide must walk a non-programmer through using the application. It should include:
+<h1> READ ME </h1>
 
-Introduction — what the program does, in plain English.
+ - <h4> When you first open the program you will left click the run button. ( the button should be green)
+ </h4>
 
-Getting Started — how to launch the program (one or two sentences referencing the README's build instructions).
+ - <h4> After clicking the run button, you should now left click. ( this is so you can start interacting wi-
+   th the program) </h4>
 
-Step-by-Step Walkthrough — number every prompt the user will see, in order, with: what the prompt is asking for, the data type / format expected (e.g., "a whole number", "a decimal number such as 87.5"), and acceptable input ranges or constraints (e.g., "Total Points Possible must be a positive integer").
 
-Sentinel Value Explanation — explain that entering a negative number for an assignment score ends input and triggers the calculation.
+ - <h4> Now that you have clicked the program, you can type any number with or without a decimal point
+   into the program, after typeing in a number you can hit then enter button or the return button (on mac)
+   on your keyboard.</h4>
 
-Sample Session — paste a complete example run (input + output) so the user can see what success looks like.
+- <h4> After you have clicked the enter button you will put in a new number
 
-Understanding Your Results — explain what each line of the final output means (Total Points Earned, Total Percentage, Final Letter Grade).
-
-Troubleshooting — at least 2 common mistakes (e.g., entering letters where a number is expected, forgetting that the sentinel is negative).
+  </h4>
