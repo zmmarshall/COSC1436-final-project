@@ -4,7 +4,7 @@ A C++ console application that calculates a student's final letter grade
 from a user-defined grading scheme and a set of assignment scores.
 
 ## Author
-Z'Morion Marshall - COSC 1436, 2026eqrw8
+Z'Morion Marshall - COSC 1436, 2026
 
 ## Description
 This program is a simple grade calculator that uses information from the user.
