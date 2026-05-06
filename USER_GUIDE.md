@@ -1,6 +1,6 @@
 <h1> READ ME </h1>
 
-- <h4>After reading the [READ ME]([url](https://github.com/zmmarshall/COSC1436-final-project/blob/2ad4d4b1709da409479a2b6465fc48cd1419e409/README.md))</h4>
+- <h4>After reading the [READ ME ](https://github.com/zmmarshall/COSC1436-final-project/blob/2ad4d4b1709da409479a2b6465fc48cd1419e409/README.md)   </h4>
 
  - <h4> When you first open the program you will left click the run button. ( the button should be green)
  </h4>
