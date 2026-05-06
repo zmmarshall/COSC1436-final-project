@@ -9,7 +9,7 @@
 /*
  * Grade Calculator — Final Project
  * Author: Z'Morion Marshall
- * Course: COSC 1436, 2026 
+ * Course: COSC 1436, spring of 2026 
  *
  * Concepts Demonstrated (Chapters 1-12)
  * -------------------------------------
