@@ -4,10 +4,12 @@ A C++ console application that calculates a student's final letter grade
 from a user-defined grading scheme and a set of assignment scores.
 
 ## Author
-Z'Morion Marshall - COSC 1436, 2026
+Z'Morion Marshall - COSC 1436, 2026eqrw8
 
 ## Description
-This progam is a simple grade calacualtor, that the user can use to help find out there grade in a class.
+This progam is a simple grade calacualtor, that uses information from the 
+user and progam was for any person to use, it can help calacual and help
+find out your grade in a class.
 
 ## Features
 - Time-of-day greeting
