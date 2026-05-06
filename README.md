@@ -7,9 +7,9 @@ from a user-defined grading scheme and a set of assignment scores.
 Z'Morion Marshall - COSC 1436, 2026eqrw8
 
 ## Description
-This progam is a simple grade calacualtor, that uses information from the 
-user and progam was for any person to use, it can help calacual and help
-find out your grade in a class.
+This program is a simple grade calculator that uses information from the user.
+It is designed for any person to use and can help calculate your grade in a 
+class;It helps you find out your final letter grade easily."
 
 ## Features
 - Time-of-day greeting
