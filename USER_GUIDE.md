@@ -7,6 +7,7 @@
 
 
 <h1> start of instructions </h1>
+
  1) <h4> When you first open the program, you will left-click the run button. ( the button should be green)
  </h4>
 
