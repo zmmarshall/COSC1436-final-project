@@ -1,9 +1,9 @@
 <h1> USER GUIDE  </h1>
 
- <h3> After reading the README instructions  </h3>
+ <h3> Before reading the user guide please read the `README` instructions from the README.md file  </h3>
    ↓
 
-[README file](https://github.com/zmmarshall/COSC1436-final-project/blob/2ad4d4b1709da409479a2b6465fc48cd1419e409/README.md)
+[README.md link](https://github.com/zmmarshall/COSC1436-final-project/blob/2ad4d4b1709da409479a2b6465fc48cd1419e409/README.md)
 
 
 <h1> start of instructions </h1>
